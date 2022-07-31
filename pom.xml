@@ -11,6 +11,7 @@
         <module>binary_search</module>
         <module>queue</module>
         <module>merge_sorted_lists</module>
+        <module>buy_sell_stock</module>
     </modules>
 
     <properties>
