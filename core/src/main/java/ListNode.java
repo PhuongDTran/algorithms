@@ -1,18 +1,36 @@
-import lombok.*;
+import java.util.ArrayList;
+import java.util.List;
 
-@AllArgsConstructor
 public class ListNode {
     int value;
     ListNode next;
 
-    public static ListNode parseArrayToListNode(int[] lst) {
-        ListNode listNode = new ListNode(-1, null);
+    public ListNode(int value) {
+        this(value, null);
+    }
+
+    public ListNode(int value, ListNode next) {
+        this.value = value;
+        this.next = next;
+    }
+
+    public static ListNode convertArrayToListNode(int[] lst) {
+        ListNode listNode = new ListNode(-1);
         ListNode runner = listNode;
         for (int e : lst) {
-            runner.next = new ListNode(e, null);
+            runner.next = new ListNode(e);
             runner = runner.next;
         }
         return listNode.next;
+    }
+
+    public static int[] convertListNodeToArray(ListNode head) {
+        List<Integer> lst = new ArrayList<>();
+        while (head != null) {
+            lst.add((head.value));
+            head = head.next;
+        }
+        return lst.stream().mapToInt(Integer::intValue).toArray();
     }
 
     @Override
