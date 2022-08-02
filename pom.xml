@@ -14,6 +14,7 @@
         <module>buy_sell_stock</module>
         <module>majority_element</module>
         <module>palindrome_linked_list</module>
+        <module>move_zeros</module>
     </modules>
 
     <properties>
