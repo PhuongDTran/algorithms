@@ -13,6 +13,7 @@
         <module>merge_sorted_lists</module>
         <module>buy_sell_stock</module>
         <module>majority_element</module>
+        <module>palindrome_linked_list</module>
     </modules>
 
     <properties>
